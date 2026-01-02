@@ -1,0 +1,9 @@
+- Pour récupérer du code :
+
+git pull origin main
+
+- Pour envoyer du code :
+
+git add .
+git commit -m "commentaire"
+git push origin main
