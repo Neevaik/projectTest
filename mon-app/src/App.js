@@ -1,13 +1,14 @@
 import './App.css';
+import TestPage from './TestPage';
+import Home from './Home';
+import { useState } from "react";
 
 function App() {
+  const [page, setPage] = useState("home");
   return (
-    <div style={styles.parent}>
-      <h1>Div parent</h1>
-
-      <div style={styles.child}>
-        <h2>Div enfant</h2>
-      </div>
+    <div>
+      {page === "home" && <Home goToTest={() => setPage("test")} />}
+      {page === "test" && <TestPage goToHome={() => setPage("home")} />}
     </div>
   );
 }
