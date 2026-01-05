@@ -4,7 +4,9 @@ function TestPage({ goToHome }) {
             <button onClick={goToHome}>Retour à Home</button>
 
             <div>
-                {/* ici */}
+              {/* 1ere etape faire le design de la page */}
+
+              
             </div>
 
         </div>
