@@ -1,7 +1,8 @@
-function Home({ goToTest }) {
+function Home({ goToTest,goToTest2 }) {
     return (
         <div>
             <button onClick={goToTest}>Aller à TestPage</button>
+            <button onClick={goToTest2}>Aller à TestPage2</button>
 
             <div style={styles.parent}>
                 <h1 style={styles.firstTitle}>Div parent</h1>
