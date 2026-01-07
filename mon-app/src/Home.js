@@ -1,41 +1,25 @@
-function Home({ goToTest,goToTest2 }) {
+import Image from './img/Exo2.png';
+import './css/pageTest.css';
+
+function Home({ goToTest, goToTest2 }) {
     return (
         <div>
             <button onClick={goToTest}>Aller à TestPage</button>
             <button onClick={goToTest2}>Aller à TestPage2</button>
 
-            <div style={styles.parent}>
-                <h1 style={styles.firstTitle}>Div parent</h1>
-        
-                <div style={styles.child}>
-                    <h2>Div enfant</h2>
-                </div>
+            <div>
+                <h1 className='title'>CECI EST UN TEST</h1>
+                <img src={Image}></img>
+                <form>
+                    <input name="email" />
+                    <input name="password" value="password" />
+                    <button type="submit">validate</button>
+                </form>
             </div>
 
         </div>
     );
 }
 
-const styles = {
-    parent: {
-        width: "400px",
-        height: "300px",
-        backgroundColor: "#add8e6",
-        border: "3px solid blue",
-        padding: "20px",
-        margin: "50px",
-    },
-    child: {
-        width: "200px",
-        height: "100px",
-        backgroundColor: "#90ee90",
-        border: "3px solid green",
-        marginTop: "20px",
-    },
-    firstTitle: {
-        color: 'yellow',
-        textAlign: 'center',
-}
-};
 
 export default Home;
