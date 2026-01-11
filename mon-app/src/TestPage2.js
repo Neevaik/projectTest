@@ -1,11 +1,12 @@
 import Image from './img/GigaTchad.jpeg';
+import Button from './components/Buttons';
 
 function TestPage2({ goToHome }) {
 
     return (
         <div>
             <button onClick={goToHome}>Retour à Home</button>
-
+        <Button/>
             <div style={styles.layout}>
                 <div style={styles.navbar}>
                     <img src={Image} alt="Logo" style={styles.logo}/>
@@ -28,7 +29,7 @@ function TestPage2({ goToHome }) {
                             placeholder="Password"
                             style={styles.inputField}
                             />
-                            <button style={styles.submitButton}>Valider</button>
+                            <button style={styles.submitButton} type="submit">Valider</button>
                         </div>
                     </div>
                 </div>
