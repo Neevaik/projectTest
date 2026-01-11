@@ -1,3 +1,4 @@
+import Image from './img/GigaTchad.jpeg';
 
 function TestPage2({ goToHome }) {
 
@@ -5,25 +6,33 @@ function TestPage2({ goToHome }) {
         <div>
             <button onClick={goToHome}>Retour à Home</button>
 
-<div style={styles.layout}>
-
-            <div style={styles.leftColumn}>
-                <h1>Navigation</h1>
-            </div>
-
-            <div style={styles.rightColumn}>
-            <div style={styles.content}>
-                <h1 style={styles.title}>Homepage</h1>
-                <div style={styles.columns}>
-                    <p style={styles.paragraph}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                    <p style={styles.paragraph}>Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-
+            <div style={styles.layout}>
+                <div style={styles.navbar}>
+                    <img src={Image} alt="Logo" style={styles.logo}/>
+                    <div style={styles.navRight}>
+                    <div style={styles.navItem}>Home</div>
+                    <div style={styles.navItem}>Cart</div>
+                    </div>
                 </div>
-       
-             </div>
+                <div style={styles.rightColumn}>
+                    <div style={styles.content}>
+                        <h1 style={styles.title}>Login</h1>
+                        <div style={styles.loginForm}>
+                            <input
+                            type="email"
+                            placeholder="Email"
+                            style={styles.inputField}
+                            />
+                            <input
+                            type="password"
+                            placeholder="Password"
+                            style={styles.inputField}
+                            />
+                            <button style={styles.submitButton}>Valider</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-</div> 
         </div>
     );
 }
@@ -37,43 +46,93 @@ const styles = {
         padding: "20px",
         margin: "50px",
     },
-    columns: {
+    navbar: {
+        width: "100%",
         display: "flex",
-        gap: "20px",
-        maxWidth: "1100px",
+        justifyContent: "space-between", 
+        gap: "30px",
+        padding: "15px 30px",
+        backgroundColor: "#eee",
     },
-    paragraph: {
-        flex: 1,
-        lineHeight: "1.5",
+    navItem: {
+        cursor: "pointer", // Optionnel
+        fontWeight: "bold", // Optionnel
+    },
+    navRight: {
+        display: "flex",
+        gap: "30px",
+    },
+
+    logo: {
+        height: "40px",
+        width: "auto",
     },
     layout: {
-    display: "flex",
-    width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
     },
-    title:{
-    textAlign: "center",
-    marginBottom: "20px",
+    title: {
+        textAlign: "center",
+        marginBottom: "20px",
     },
 
-     leftColumn: {
-    width: "200px",          // colonne isolée
-    backgroundColor: "#eee",
-    padding: "10px",
+    leftColumn: {
+        width: "200px",          // colonne isolée
+        backgroundColor: "#eee",
+        padding: "10px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
     },
     rightColumn: {
-    flex: 1,                 // prend tout l’espace restant
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    minHeight: "100vh",
-    padding: "10px",
+        flex: 1,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",       // centre horizontalement
+        justifyContent: "center",   // centre verticalement
+        minHeight: "80vh",          // hauteur pour le centrage vertical
+        padding: "10px",
+    },
+    content: {
+        width: "100%",
+        maxWidth: "400px",   // largeur max pour le formulaire
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "15px",
+    },
+    loginForm: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "15px",
+        width: "100%",
+        maxWidth: "400px", // largeur du formulaire
+        marginTop: "20px",
     },
 
-    content: {
-    width: "100%",
-    maxWidth: "1100px",   // largeur centrée
-    paddingTop: "15vh",
+    inputField: {
+        width: "100%",
+        padding: "10px 15px",
+        fontSize: "16px",
+        border: "1px solid #ccc",
+        borderRadius: "5px",
+        boxSizing: "border-box",
     },
+
+    submitButton: {
+        width: "100%",
+        padding: "10px 15px",
+        fontSize: "16px",
+        border: "none",
+        borderRadius: "5px",
+        backgroundColor: "#4CAF50",
+        color: "white",
+        cursor: "pointer",
+    },
+
+
 }
 export default TestPage2;
 
