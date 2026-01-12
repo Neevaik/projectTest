@@ -1,35 +1,36 @@
-import Image from './img/GigaTchad.jpeg';
+import SpiderMan from './img/Spider-man.jpg';
+import Hulk from './img/Hulk.jpg';
+import CaptainAmerica from './img/Captain America.jpg';
+import Thor from './img/Thor.jpg';
+import IronMan from './img/Iron Man.jpg';
 import Button from './components/Buttons';
+import './css/pageTest2.css';
+import Card from './components/Card';
 
 function TestPage2({ goToHome }) {
 
     return (
         <div>
-            <button onClick={goToHome}>Retour à Home</button>
+            
         <Button/>
-            <div style={styles.layout}>
-                <div style={styles.navbar}>
-                    <img src={Image} alt="Logo" style={styles.logo}/>
-                    <div style={styles.navRight}>
-                    <div style={styles.navItem}>Home</div>
-                    <div style={styles.navItem}>Cart</div>
+            <div className="layout">
+                <div className="navbar">
+                    <h1 className="navTitle">Titre</h1>
+                    <div className="navRight">
+                    <div className="navItem">Home</div>
+                    <button onClick={goToHome}>Retour à Home</button>
+                    <button className="navButton" onClick={goToHome}>T2</button>
                     </div>
                 </div>
-                <div style={styles.rightColumn}>
-                    <div style={styles.content}>
-                        <h1 style={styles.title}>Login</h1>
-                        <div style={styles.loginForm}>
-                            <input
-                            type="email"
-                            placeholder="Email"
-                            style={styles.inputField}
-                            />
-                            <input
-                            type="password"
-                            placeholder="Password"
-                            style={styles.inputField}
-                            />
-                            <button style={styles.submitButton} type="submit">Valider</button>
+                <div className="rightColumn">
+                    <div className="content">
+                        <h1 className="title">Films</h1>
+                        <div className="loginForm">
+                            <Card image={SpiderMan} title={"Spider-man"} description={"Orphelin, Peter Parker est élevé par sa tante May et son oncle Ben dans le quartier Queens de New York. Tout en poursuivant ses études à l'université, il trouve un emploi de photographe au journal Daily Bugle. Il partage son appartement avec Harry Osborn, son meilleur ami, et rêve de séduire la belle Mary Jane."} />
+                            <Card image={Thor} title={"Thor"} description={"Le roi Odin règne avec sagesse sur son royaume. Une entente maintient la paix avec les Géants du monde glacé de Jotunheim. Les gestes irréfléchis du jeune Thor, pressenti pour prendre la place de son père sur le trône, mettent cependant en péril la paix fragile entre les deux peuples, ce qui pousse son père à le bannir sur Terre."} />
+                            <Card image={CaptainAmerica} title={"Captain America"} description={"1941. La Seconde Guerre mondiale fait rage. Après avoir tenté vainement de s'engager dans l'armée pour se battre aux côtés des Alliés, Steve Rogers, frêle et timide, se porte volontaire pour participer à un programme expérimental qui va le transformer en un super soldat connu sous le nom de Captain America."} />
+                            <Card image={Hulk} title={"Hulk"} description={"Bruce Banner est un scientifique brillant, transformé accidentellement en Hulk suite à une exposition aux rayons gamma. Sous sa forme monstrueuse, Hulk libère une force incontrôlable alimentée par la colère."} />
+                            <Card image={IronMan} title={"Iron Man"} description={"Alors qu'il fait l'essai d'une arme de son invention en Afghanistan, le milliardaire Tony Stark est capturé par des insurgés qui le forcent à travailler pour eux. Mais à leur insu, le scientifique crée pour lui-même une armure superpuissante au moyen de laquelle il s'évade et rentre aux États-Unis."} />
                         </div>
                     </div>
                 </div>
@@ -38,103 +39,7 @@ function TestPage2({ goToHome }) {
     );
 }
 
-const styles = {
-    parent: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "20px",
-        margin: "50px",
-    },
-    navbar: {
-        width: "100%",
-        display: "flex",
-        justifyContent: "space-between", 
-        gap: "30px",
-        padding: "15px 30px",
-        backgroundColor: "#eee",
-    },
-    navItem: {
-        cursor: "pointer", // Optionnel
-        fontWeight: "bold", // Optionnel
-    },
-    navRight: {
-        display: "flex",
-        gap: "30px",
-    },
 
-    logo: {
-        height: "40px",
-        width: "auto",
-    },
-    layout: {
-        display: "flex",
-        flexDirection: "column",
-        width: "100%",
-    },
-    title: {
-        textAlign: "center",
-        marginBottom: "20px",
-    },
-
-    leftColumn: {
-        width: "200px",          // colonne isolée
-        backgroundColor: "#eee",
-        padding: "10px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-    },
-    rightColumn: {
-        flex: 1,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",       // centre horizontalement
-        justifyContent: "center",   // centre verticalement
-        minHeight: "80vh",          // hauteur pour le centrage vertical
-        padding: "10px",
-    },
-    content: {
-        width: "100%",
-        maxWidth: "400px",   // largeur max pour le formulaire
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "15px",
-    },
-    loginForm: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: "15px",
-        width: "100%",
-        maxWidth: "400px", // largeur du formulaire
-        marginTop: "20px",
-    },
-
-    inputField: {
-        width: "100%",
-        padding: "10px 15px",
-        fontSize: "16px",
-        border: "1px solid #ccc",
-        borderRadius: "5px",
-        boxSizing: "border-box",
-    },
-
-    submitButton: {
-        width: "100%",
-        padding: "10px 15px",
-        fontSize: "16px",
-        border: "none",
-        borderRadius: "5px",
-        backgroundColor: "#4CAF50",
-        color: "white",
-        cursor: "pointer",
-    },
-
-
-}
 export default TestPage2;
 
 // Test pour combler : https://www.lipsum.com/

@@ -1,7 +1,10 @@
 .card{
-    width: 300px;
-    border-radius: 12px;
-    border: solid;
+  width: 500px;           /* largeur fixe pour chaque Card */
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .picture{
