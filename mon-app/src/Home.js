@@ -1,12 +1,14 @@
 import './css/pageTest.css';
 import Card from './components/Card';
+import Navbar from './components/Navbar';
 
 function Home({ goToTest, goToTest2 }) {
 
     
     return (
         <div>
-            <button onClick={goToTest}>Aller à TestPage</button>
+            <Navbar goToHome={goToTest}/>
+            {/* <button onClick={goToTest}>Aller à TestPage</button> */}
             <button onClick={goToTest2}>Aller à TestPage2</button>
 
             <div className='background'>

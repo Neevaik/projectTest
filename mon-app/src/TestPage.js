@@ -1,9 +1,10 @@
+import Navbar from "./components/Navbar";
 
 function TestPage({ goToHome }) {
 
     return (
         <div>
-            <button onClick={goToHome}>Retour à Home</button>
+            <Navbar goToHome={goToHome}/>
             <div style={styles.parent}>
                 <h1>Test</h1>
                 <p style={styles.secondTitle}>Appuyez sur - ou + </p>
