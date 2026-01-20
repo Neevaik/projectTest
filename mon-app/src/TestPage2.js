@@ -6,7 +6,7 @@ import './css/pageTest2.css';
 import Card from './components/Card';
 import Navbar from './components/Navbar';
 
-function TestPage2({ goToHome }) {
+function TestPage2({ goToHome, goToTest }) {
 
     const movies = [
         {
@@ -38,7 +38,7 @@ function TestPage2({ goToHome }) {
     return (
         <div>
             <div className="layout">
-                <Navbar goToHome={goToHome} />
+                <Navbar title="Page test 2" goToHome={goToHome} goToTest={goToTest} goToTest2={() => { }} />
                 <div className="rightColumn">
                     <div className="content">
                         <h1 className="title">Films</h1>

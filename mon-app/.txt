@@ -1,0 +1,2 @@
+- Crée un fichier css pour la navbar et l'implémenter
+- Mettre tout les styles dans un fichier css
