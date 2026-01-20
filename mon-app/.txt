@@ -1,1 +1,3 @@
 - Mettre tout les styles dans un fichier css
+- Créer un composant CardTest pour afficher un title, description, difficulty
+- Afficher dans cette card chaque éléments du tableau "exercices"
