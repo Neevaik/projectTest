@@ -1,10 +1,10 @@
 import Navbar from "./components/Navbar";
 
-function TestPage({ goToHome, goToTest2 }) {
+function TestPage({ goToExercice, goToHome, goToTest2 }) {
 
     return (
         <div>
-            <Navbar title={"Page test"} goToHome={goToHome} goToTest={() => { }} goToTest2={goToTest2} />
+            <Navbar title={"Page test"} goToExercice={goToExercice} goToHome={goToHome} goToTest={() => { }} goToTest2={goToTest2} />
             <div style={styles.parent}>
                 <h1>Test</h1>
                 <p style={styles.secondTitle}>Appuyez sur - ou + </p>

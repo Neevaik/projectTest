@@ -1,8 +1,9 @@
 import '../css/Navbar.css';
 
-function Navbar({ title, goToHome, goToTest, goToTest2 }) {
+function Navbar({ title, goToHome, goToExercice, goToTest, goToTest2 }) {
     const buttons = [
         { label: "Accueil", action: goToHome },
+        { label: "Exercice", action: goToExercice },
         { label: "Test", action: goToTest },
         { label: "Test 2", action: goToTest2 },
     ];

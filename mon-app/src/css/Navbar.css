@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
 
-    background: rgba(2, 6, 23, 0.85);
+    background: rgba(2, 6, 23, 0.85)!important;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
@@ -35,7 +35,6 @@
     font-weight: 500;
     cursor: pointer;
     border-radius: 6px;
-
     transition: background 0.2s ease, transform 0.15s ease;
 }
 
