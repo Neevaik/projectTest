@@ -1,5 +1,6 @@
 import './css/pageTest2.css';
 import Navbar from './components/Navbar';
+import Card from './components/CardTest';
 
 function TestPage2({ goToExercice, goToHome, goToTest }) {
 
@@ -40,6 +41,9 @@ const exercices = [
         <div>
             <div >
                 <Navbar title="Page test 2" goToExercice={goToExercice} goToHome={goToHome} goToTest={goToTest} goToTest2={() => { }} />
+            </div>
+            <div >
+                
             </div>
         </div>
     );
