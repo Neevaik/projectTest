@@ -1,22 +1,13 @@
 import '../css/pageTest.css';
-import exercices from "../TestPage2";
 
-function CardTest({ title, description, difficulty }) {
+function CardTest({ a, b, jeanMichel }) {
+
     return (
-        <div className='card' style={{ backgroundColor: 'blue' }}>
-            <h2 className='title'>{title}</h2>
-            <p className='description'>{description}</p>
-            <p className='difficulty'>{difficulty}</p>
-
-
-                <ul className="exercice-list">
-                    {exercices.map(ex => (
-                        <li key={ex.id} className="exercice-item">
-                            <h3>{ex.title}</h3>
-                            <p>{ex.description}</p>
-                        </li>
-                    ))}
-                </ul>
+        <div >
+            <p>{a}</p>
+            <p>{b}</p>
+            <p>{jeanMichel}</p>
+            <h2>---------------</h2>
         </div>
     )
 }
