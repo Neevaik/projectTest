@@ -1,3 +1,6 @@
-- Mettre tout les styles dans un fichier css
-- Créer un composant CardTest pour afficher un title, description, difficulty
-- Afficher dans cette card chaque éléments du tableau "exercices"
+- L'objectif est d'afficher sur la page les users
+- Créer un composant userCard qui affiche : avatar (une photo de profil), name,age
+- Afficher sur la page les users qui ont isOnline:true au même endroit
+- Afficher en dessous de la liste les users isOnline:false
+
+- Utiliser les donnéses qui viennent de data.js
