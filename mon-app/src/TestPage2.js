@@ -5,7 +5,7 @@ import { users } from '../src/data';
 
 function TestPage2({ goToExercice, goToHome, goToTest }) {
 
-  
+
   return (
     <div>
       <div >
@@ -17,12 +17,12 @@ function TestPage2({ goToExercice, goToHome, goToTest }) {
         )}
       </div>
 
-<div>
-  <p>----------------------------------------------</p>
-</div>
+      <div>
+        <p>----------------------------------------------</p>
+      </div>
 
       <div>
-         {users.map(x =>
+        {users.map(x =>
           !x.isOnline ? (<UserCard name={x.name} age={x.age} avatar={x.avatar} isOnline={x.isOnline} />) : null
         )}
       </div>
