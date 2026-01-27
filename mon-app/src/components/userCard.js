@@ -1,15 +1,15 @@
 import '../css/pageTest.css';
 
-function CardTest({ name, age, avatar}) {
+function userCard({ name, age, avatar, isOnline }) {
 
     return (
         <div >
-            <p>{avatar}</p>
+            <img src={avatar} />
             <p>{name}</p>
             <p>{age}</p>
-            <h2>---------------</h2>
+            <p>{isOnline}</p>
         </div>
     )
 }
 
-export default CardTest;
+export default userCard;
