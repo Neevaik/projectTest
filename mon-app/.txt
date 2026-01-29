@@ -1,6 +1,30 @@
-- L'objectif est d'afficher sur la page les users
-- Créer un composant userCard qui affiche : avatar (une photo de profil), name,age
-- Afficher sur la page les users qui ont isOnline:true au même endroit
-- Afficher en dessous de la liste les users isOnline:false
+----- Exercice à faire sur la 1ère page de test
 
-- Utiliser les donnéses qui viennent de data.js
+---- Objectif : Afficher sur la page les films que l'on a pas déjà vu
+
+-- outils :
+
+dossier /data
+films => movies.js
+films vue => watchedMovies.js
+
+A faire :
+
+- Nettoyer TestPage
+- Afficher les movies dans une card
+- Afficher seulement les movies qu'on a pas déjà vu en comparant les 2 tableaux. Les "id" dans watchedMovies sont les films qui ont été vu.
+
+
+--- Astuce /étape :
+
+- Récupéré les tableaux et voir en console navigateur (F12) s'ils s'affichent bien
+- Afficher quelques movies sur la page
+- Créer un composant movies avec du style prêt à recevoir des props
+- Utiliser ce composant dans la page en lui envoyant les props
+- Créer une fonction conditionnel qui va comparer les 2 tableaux afin de voir si dans watchedMovies on retrouve les mêmes id que dans movies
+- Afficher le résultat 
+
+
+--- Indice :
+
+- Peut être utiliser .some() selon la stratégie

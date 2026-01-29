@@ -1,0 +1,6 @@
+export const watchedMovies = [
+  { id: 1 },
+  { id: 3 },
+  { id: 6 },
+  { id: 9 }
+];
