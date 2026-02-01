@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import UserCard from './components/UserCard';
 import { users } from '../src/data';
 
+
 function TestPage2({ goToExercice, goToHome, goToTest }) {
 
 

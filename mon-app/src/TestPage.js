@@ -1,43 +1,29 @@
 import Navbar from "./components/Navbar";
+import Styles from "./css/Styles.css";
+import Movies from "./components/Movies";
+import { movies } from '../src/data'
+import { watchedMovies } from '../src/data'
 
 function TestPage({ goToExercice, goToHome, goToTest2 }) {
 
+        const watchedOnly = movies.filter(movie =>
+  watchedMovies.some(w => w.id === movie.id)
+);
     return (
         <div>
             <Navbar title={"Page test"} goToExercice={goToExercice} goToHome={goToHome} goToTest={() => { }} goToTest2={goToTest2} />
-            <div style={styles.parent}>
-                <h1>Test</h1>
-                <p style={styles.secondTitle}>Appuyez sur - ou + </p>
+            <div style={Styles.parent}>
+                <h1>Films</h1>
                 <div>
                 </div>
-                <div style={styles.counter}>
-                    <span>-</span>
-                    <span style={styles.value}>0</span>
-                    <span>+</span>
+                <div style={Styles.styles}>
+
                 </div>
             </div>
         </div>
     );
 }
 
-const styles = {
-    parent: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "20px",
-        margin: "50px",
-    },
-    counter: {
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: "20px",
-    },
-    secondTitle: {
-        textDecoration: "underline",
-    }
-}
+
 export default TestPage;
 // test
