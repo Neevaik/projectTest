@@ -1,0 +1,32 @@
+.movie-card {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  width: 220px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: Arial, sans-serif;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.movie-id {
+  font-size: 12px;
+  opacity: 0.6;
+  margin-bottom: 6px;
+}
+
+.movie-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.movie-year {
+  font-size: 14px;
+  color: #b3b3b3;
+}
