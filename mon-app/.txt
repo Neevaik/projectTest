@@ -1,30 +1,21 @@
 ----- Exercice à faire sur la 1ère page de test
 
----- Objectif : Afficher sur la page les films que l'on a pas déjà vu
+---- Objectif : Afficher sur une page les produits
 
 -- outils :
 
-dossier /data
-films => movies.js
-films vue => watchedMovies.js
+products.js
 
 A faire :
 
-- Nettoyer TestPage
-- Afficher les movies dans une card
-- Afficher seulement les movies qu'on a pas déjà vu en comparant les 2 tableaux. Les "id" dans watchedMovies sont les films qui ont été vu.
+- Créer un composant pour afficher les nom & prix des produits
+- Si inStock: true => afficher "En stock ✅" sinon Rupture ❌
+- Si onSale: true => afficher une phrase en plus "PROMO 🔥"
 
 
 --- Astuce /étape :
 
-- Récupéré les tableaux et voir en console navigateur (F12) s'ils s'affichent bien
-- Afficher quelques movies sur la page
-- Créer un composant movies avec du style prêt à recevoir des props
-- Utiliser ce composant dans la page en lui envoyant les props
-- Créer une fonction conditionnel qui va comparer les 2 tableaux afin de voir si dans watchedMovies on retrouve les mêmes id que dans movies
-- Afficher le résultat 
+
 
 
 --- Indice :
-
-- Peut être utiliser .some() selon la stratégie
