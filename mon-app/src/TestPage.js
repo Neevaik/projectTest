@@ -1,11 +1,10 @@
 import Navbar from "./components/Navbar";
-import { movies } from '../src/data/movies'
-import { watchedMovies } from '../src/data/watchedMovies'
-import MovieCard from "./components/MovieCard";
+import ProductCard from "./components/ProductCard";
+import { products } from '../src/data/products'
 
 function TestPage({ goToExercice, goToHome, goToTest2 }) {
 
-    const notWatched = movies.filter(x => !watchedMovies.some(y => x.id === y.id));
+   // const notWatched = movies.filter(x => !watchedMovies.some(y => x.id === y.id)); 
 
     return (
         <>
@@ -14,8 +13,8 @@ function TestPage({ goToExercice, goToHome, goToTest2 }) {
             </div>
 
             <div>
-                {notWatched.map(movie => (
-                    <MovieCard id={movie.id} title={movie.title} year={movie.year} />
+                {products.map(product => (
+                    <ProductCard id={product.id} price={product.price} name={product.name} inStock={product.inStock} onSale={product.onSale} />
                 ))}
             </div>
         </>
