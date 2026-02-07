@@ -2,7 +2,7 @@ import "../css/MovieCard.css";
 
 function ProductCard({ id, price, name, inStock, onSale }) {
   return (
-    <div className="xxx">
+    <div>
  {/*     <p className="product-id">{id}</p>  Stock */}
       <p className="product-price">{price}€</p>
       <p className="product-name">{name}</p>
