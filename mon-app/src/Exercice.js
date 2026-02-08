@@ -1,12 +1,14 @@
 import Navbar from "./components/Navbar";
 import './css/Exercice.css';
+import { useState } from "react";
 
 function Exercice({ goToHome, goToTest, goToTest2 }) {
 
+        const [counter, setCounter] = useState(0);
 
     return (
         <>
-            <div>
+           
                 <Navbar
                     title="Page Exercice"
                     goToExercice={() => { }}
@@ -14,10 +16,16 @@ function Exercice({ goToHome, goToTest, goToTest2 }) {
                     goToTest={goToTest}
                     goToTest2={goToTest2}
                 />
-            </div>
+            
 
             <div className="counter-page">
-                {/* <button onClick={() => setCounter(counter + 1)}>-</button> */}
+                <h1>Counter</h1>
+                
+             <div className="counter-controls">
+                <button onClick={() => setCounter(counter - 1)}>-</button>
+                <p className="counter-value"onClick={() => setCounter(0)} title="Réinitialiser" > {counter} </p> {/* En bonus j'ai mis un bouton reset au centre */}
+                <button onClick={() => setCounter(counter + 1)}>+</button>
+            </div>
             </div>
         </>
     );

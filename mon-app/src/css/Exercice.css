@@ -44,3 +44,9 @@
 .counter-page p:nth-child(3):hover {
     transform: none;
 }
+
+.counter-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
