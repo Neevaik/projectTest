@@ -11,12 +11,17 @@
 le titre, 
 la phrase : "tâche à faire',
 
-- La page contiendra un bouton "reset", un bouton qui permet de vider les tasks 
-
+- La page contiendra un bouton "reset", un bouton qui permet de vider les tasks donc de rendre la page vide
+- faire un style de page propre
 
 --- Astuce /étape :
 
+- récupérer les datas : tasks
+- Setter les datas dans un état
+- Créer un composant card qui prend en props : title, done
+- Envoyer les datas au composant
+- Vérifier la clé "done"
+- Créer un bouton cliquable qui va setter l'état à vide
 
 
 
---- Indice :
