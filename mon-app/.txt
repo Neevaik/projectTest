@@ -1,16 +1,17 @@
------ Exercice à faire sur la 1ère page de test
+----- Exercice à faire sur la 1ère page de testPage2
 
----- Objectif : Afficher sur une page les produits
+---- Objectif : Afficher sur la page les tasks
 
--- outils :
 
-products.js
+---- A faire :
 
-A faire :
+- Créer un composant qui va afficher les tasks qui ont "done:false"
 
-- Créer un composant pour afficher les nom & prix des produits
-- Si inStock: true => afficher "En stock ✅" sinon Rupture ❌
-- Si onSale: true => afficher une phrase en plus "PROMO 🔥"
+- Le composant devra afficher : 
+le titre, 
+la phrase : "tâche à faire',
+
+- La page contiendra un bouton "reset", un bouton qui permet de vider les tasks 
 
 
 --- Astuce /étape :
