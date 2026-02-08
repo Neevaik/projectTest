@@ -21,9 +21,9 @@ function Exercice({ goToHome, goToTest, goToTest2 }) {
             <div className="counter-page">
                 <h1>Counter</h1>
                 
-             <div className="counter-controls">
+                <div className="counter-controls">
                 <button onClick={() => setCounter(Math.max(0,counter - 1))}>-</button>
-                <p className="counter-value"onClick={() => setCounter(0)} title="Réinitialiser" > {counter} </p> {/* En bonus j'ai mis un bouton reset au centre */}
+                <p className="counter-value"onClick={() => setCounter(0)} > {counter} </p> {/* En bonus j'ai mis un bouton reset au centre */}
                 <button onClick={() => setCounter(counter + 1)}>+</button>
             </div>
             </div>
