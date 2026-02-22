@@ -1,0 +1,74 @@
+.reset-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  gap: 15px;   /* espace entre les cards */
+}
+
+.task-card {
+  padding: 15px 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  background-color: rgb(255, 255, 255);
+}
+
+.task-card:hover {
+  transform: translateY(-3px);
+}
+
+.task-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.task-status {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Tâche non terminée */
+.done {
+  border-left: 6px solid #f44336 ;
+}
+
+/* Tâche terminée */
+.not-done {
+  border-left: 6px solid #4CAF50 ;
+}
+
+------ 
+
+.reset-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.reset-btn {
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #cc3e3e;
+  color: rgb(255, 255, 255);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.reset-btn:hover {
+  background-color: #e60000;
+  transform: translateY(-2px);
+}
+
+.reset-btn:active {
+  transform: scale(0.97);
+}
