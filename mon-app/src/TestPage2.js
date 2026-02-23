@@ -3,16 +3,12 @@ import './css/Tasks.css';
 import Navbar from './components/Navbar';
 import TasksCard from "./components/TasksCard";
 import { tasks as initialTasks } from '../src/data/tasks'
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 
 function TestPage2({ goToExercice, goToHome, goToTest }) {
 
-  const [tasks, setTasks] = useState(initialTasks);
-
-useEffect(() => {
-  setTasks(initialTasks.filter(task => task.done));
-}, []);
+  const [tasks, setTasks] = useState(initialTasks.filter(task => !task.done));
 
   return (
     <div>
@@ -20,15 +16,15 @@ useEffect(() => {
         <Navbar title="Page test 2" goToExercice={goToExercice} goToHome={goToHome} goToTest={goToTest} goToTest2={() => { }} />
       </div>
 
-<div className="reset-container">
-  <button className="reset-btn" onClick={() => setTasks([])}>
-    Reset
-  </button>
-</div>
+      <div className="reset-container">
+        <button className="reset-btn" onClick={() => setTasks([])}>
+          Reset
+        </button>
+      </div>
 
       <div className="tasks-container">
         {tasks.map((x) => (
-          <TasksCard key={x.id} title={x.title} done={x.done === true} />
+          <TasksCard title={x.title} done={x.done} />
         ))}
       </div>
     </div>
