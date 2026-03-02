@@ -3,6 +3,13 @@ import "./css/MoviePage.css";
 
 function TestPage({ goToExercice, goToHome, goToTest2 }) {
 
+function calcul(operator) {
+    if (operator === "+") {
+      let a = 0
+      let b = 0
+      return a + b;
+    }
+}
   return (
     <>
       <Navbar
