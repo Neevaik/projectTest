@@ -3,11 +3,21 @@ import "./css/MoviePage.css";
 
 function TestPage({ goToExercice, goToHome, goToTest2 }) {
 
+  let a = 0
+  let b = 0
 function calcul(operator) {
     if (operator === "+") {
-      let a = 0
-      let b = 0
       return a + b;
+    }
+}
+    if (operator === "-") {
+      return a - b;
+    }
+}    if (operator === "x") {
+      return a * b;
+    }
+}    if (operator === "/") {
+      return a / b;
     }
 }
   return (
