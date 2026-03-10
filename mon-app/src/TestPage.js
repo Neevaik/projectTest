@@ -4,25 +4,23 @@ import { useState } from "react";
 
 function TestPage({ goToExercice, goToHome, goToTest2 }) {
 
-const [StateA, SetStateA] = useState((0));
-const [StateB, SetStateB] = useState((0));
-
-  {/*let a = 0
-  let b = 0 */}
+const [firstValue, SetfirstValue] = useState(0);
+const [secondValue, SetsecondValue] = useState(0);
+const [result, Setresult] = useState(0);
 
 function calcul(operator) {
     if (operator === "+") {
-      return StateA + StateB;
+      return result=firstValue + secondValue;
     }
-}
+
     if (operator === "-") {
-      return StateA - StateB;
+      return result=firstValue - secondValue;
     }
-}    if (operator === "x") {
-      return StateA * StateB;
+    if (operator === "x") {
+      return result=firstValue * secondValue;
     }
-}    if (operator === "/") {
-      return StateA / StateB;
+    if (operator === "/") {
+      return result=firstValue / secondValue;
     }
 }
   return (
