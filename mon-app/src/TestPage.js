@@ -1,26 +1,36 @@
 import Navbar from "./components/Navbar";
+import './css/pageTest.css';
 import "./css/MoviePage.css";
 import { useState } from "react";
 
 function TestPage({ goToExercice, goToHome, goToTest2 }) {
 
-const [firstValue, SetfirstValue] = useState(0);
-const [secondValue, SetsecondValue] = useState(0);
+const [firstValue, SetfirstValue] = useState(1);
+const [secondValue, SetsecondValue] = useState(7);
 const [result, Setresult] = useState(0);
 
 function calcul(operator) {
-    if (operator === "+") {
-      return result=firstValue + secondValue;
-    }
 
+    if (operator === "+") {
+     console.log("Prout") 
+     Setresult(firstValue + secondValue);
+     console.log("Le résultat est:", result);
+     return 
+    }
     if (operator === "-") {
-      return result=firstValue - secondValue;
+      Setresult(firstValue - secondValue);
+      console.log("Le résultat est:", result); 
+      return 
     }
     if (operator === "x") {
-      return result=firstValue * secondValue;
+      Setresult(firstValue * secondValue);
+      console.log("Le résultat est:", result);
+      return 
     }
     if (operator === "/") {
-      return result=firstValue / secondValue;
+      Setresult(firstValue / secondValue);
+      console.log("Le résultat est:", result);
+      return     
     }
 }
   return (
@@ -33,8 +43,8 @@ function calcul(operator) {
         goToTest2={goToTest2}
       />
 
-      <div className="test-page">
-        {/* <button onClick={() => setMovie([])}>RESET</button> */}
+      <div className="plus-container">
+        <button className="plus-btn" onClick={() => calcul("+")}>Fait +</button>
       </div>
     </>
   );

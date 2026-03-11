@@ -1,0 +1,17 @@
+.plus-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.plus-btn {
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #cc3e3e;
+  color: rgb(255, 255, 255);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
