@@ -2,37 +2,38 @@ import Navbar from "./components/Navbar";
 import './css/pageTest.css';
 import "./css/MoviePage.css";
 import { useState } from "react";
+import { calcul } from "./Tools.js";
 
 function TestPage({ goToExercice, goToHome, goToTest2 }) {
 
-const [firstValue, SetfirstValue] = useState(1);
-const [secondValue, SetsecondValue] = useState(7);
-const [result, Setresult] = useState(0);
+  const [firstValue, setFirstValue] = useState(1);
+  const [secondValue, setSecondValue] = useState(7);
+  const [result, setResult] = useState(0);
 
-function calcul(operator) {
+  // function calcul(operator) {
 
-    if (operator === "+") {
-     console.log("Prout") 
-     Setresult(firstValue + secondValue);
-     console.log("Le résultat est:", result);
-     return 
-    }
-    if (operator === "-") {
-      Setresult(firstValue - secondValue);
-      console.log("Le résultat est:", result); 
-      return 
-    }
-    if (operator === "x") {
-      Setresult(firstValue * secondValue);
-      console.log("Le résultat est:", result);
-      return 
-    }
-    if (operator === "/") {
-      Setresult(firstValue / secondValue);
-      console.log("Le résultat est:", result);
-      return     
-    }
-}
+  //     if (operator === "+") {
+  //      console.log("Prout") 
+  //      r(esult=firstValue + secondValue);
+  //      console.log("Le résultat est:", result);
+  //      return 
+  //     }
+  //     if (operator === "-") {
+  //       Setresult(firstValue - secondValue);
+  //       console.log("Le résultat est:", result); 
+  //       return 
+  //     }
+  //     if (operator === "x") {
+  //       Setresult(firstValue * secondValue);
+  //       console.log("Le résultat est:", result);
+  //       return 
+  //     }
+  //     if (operator === "/") {
+  //       Setresult(firstValue / secondValue);
+  //       console.log("Le résultat est:", result);
+  //       return     
+  //     }
+  // }
   return (
     <>
       <Navbar
@@ -44,7 +45,7 @@ function calcul(operator) {
       />
 
       <div className="plus-container">
-        <button className="plus-btn" onClick={() => calcul("+")}>Fait +</button>
+        <button className="plus-btn" onClick={() => calcul("*", firstValue, secondValue, result,setFirstValue, setSecondValue, setResult)}>Fait +</button>
       </div>
     </>
   );
