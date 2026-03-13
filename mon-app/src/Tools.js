@@ -1,22 +1,21 @@
-export function calcul(operator, firstValue, secondValue, result, setFirstValue, setSecondValue, setResult) {
-
+export function plus(operator, firstValue, secondValue, result, setResult) {
     if (operator === "+") {
         setResult(firstValue + secondValue)
-        console.log("le résultat est : ", result)
     }
-
+}
+export function multiply(operator, firstValue, secondValue, result, setResult) {
     if (operator === "*") {
         setResult(firstValue * secondValue)
-        console.log("le résultat est : ", result)
     }
-
+}
+export function divide(operator, firstValue, secondValue, result, setResult) {
     if (operator === "/") {
         setResult(firstValue / secondValue)
-        console.log("le résultat est : ", result)
     }
-
+}
+export function minus(operator, firstValue, secondValue, result, setResult) {
     if (operator === "-") {
         setResult(firstValue - secondValue)
-        console.log("le résultat est : ", result)
     }
+    return;
 }

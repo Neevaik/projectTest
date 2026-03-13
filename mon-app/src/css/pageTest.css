@@ -1,9 +1,12 @@
 .plus-container {
   text-align: center;
   margin: 30px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-.plus-btn {
+.operator-btn {
   padding: 10px 25px;
   font-size: 16px;
   font-weight: bold;
@@ -14,4 +17,34 @@
   color: rgb(255, 255, 255);
   transition: all 0.2s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.Number-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.Number-container p {
+  margin: 0;
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #444;
+  border-radius: 6px;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
