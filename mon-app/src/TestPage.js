@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import './css/pageTest.css';
 import "./css/MoviePage.css";
 import { useState } from "react";
-import { plus, multiply,minus,divide } from "./Tools.js";
+import { plus, multiply,minus,divide, isArray} from "./Tools.js";
 
 function TestPage({ goToExercice, goToHome, goToTest2 }) {
 
@@ -10,7 +10,8 @@ function TestPage({ goToExercice, goToHome, goToTest2 }) {
   const [secondValue, setSecondValue] = useState(3)
   const [result, setResult] = useState(0);
   
-
+  const array = [];
+  isArray(array);
   return (
     <>
       <Navbar
@@ -22,10 +23,10 @@ function TestPage({ goToExercice, goToHome, goToTest2 }) {
       />
 
       <div className="plus-container">
-        <button className="operator-btn" onClick={() => multiply("*", firstValue, secondValue, result, setResult)}>Multiplie</button>
-        <button className="operator-btn" onClick={() => minus("-", firstValue, secondValue, result, setResult)}>Soustraie</button>
-        <button className="operator-btn" onClick={() => plus("+", firstValue, secondValue, result, setResult)}>Additionne</button>
-        <button className="operator-btn" onClick={() => divide("/", firstValue, secondValue, result, setResult)}>Divise</button>
+        <button className="operator-btn" onClick={() => multiply("*", firstValue, secondValue,setResult)}>Multiplie</button>
+        <button className="operator-btn" onClick={() => minus("-", firstValue, secondValue, setResult)}>Soustraie</button>
+        <button className="operator-btn" onClick={() => plus("+", firstValue, secondValue,setResult)}>Additionne</button>
+        <button className="operator-btn" onClick={() => divide("/", firstValue, secondValue,setResult)}>Divise</button>
         <div className="Number-container">
           <p>1</p>
           <p>2</p>
@@ -38,6 +39,7 @@ function TestPage({ goToExercice, goToHome, goToTest2 }) {
           <p>9</p>     
         </div>
         <p className="result">Résultat : {result} </p>
+        <p className="result">{isArray(array) ? "Le tableau contient des éléments" : "Le tableau est vide"} </p>
       </div>
     </>
   );
