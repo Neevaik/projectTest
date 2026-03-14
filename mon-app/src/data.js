@@ -1,38 +1,39 @@
-export const users = [
+const mixedArray = [
+  "hello world",
+  "javascript",
+
+  [1, 2, 3, 4],
+  ["apple", "banana", "cherry"],
+
   {
-    name: "Alice",
-    age: 25,
-    isOnline: true,
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg"
+    number1: 9,
+    number2: 3,
+    symbol: "+"
   },
   {
-    name: "Bob",
-    age: 30,
-    isOnline: false,
-    avatar: "https://randomuser.me/api/portraits/men/35.jpg"
+    number1: 10,
+    number2: 2,
+    symbol: "*"
   },
   {
-    name: "Charlie",
-    age: 22,
-    isOnline: true,
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg"
+    number1: 19,
+    number2: 3,
+    symbol: "*"
   },
-    {
-    name: "Paul",
-    age: 33,
-    isOnline: true,
-    avatar: "https://randomuser.me/api/portraits/men/33.jpg"
+  {
+    number1: 5,
+    number2: 2,
+    symbol: "-"
   },
-   {
-    name: "Tom",
-    age: 44,
-    isOnline: false,
-    avatar: "https://randomuser.me/api/portraits/men/44.jpg"
+  {
+    number1: 50,
+    number2: 5,
+    symbol: "/"
   },
-   {
-    name: "Lisa",
-    age: 19,
-    isOnline: true,
-    avatar: "https://randomuser.me/api/portraits/men/19.jpg"
-  },
+
+  42,
+  true,
+  { name: "Kevin", age: 25 }
 ];
+
+export default mixedArray;
