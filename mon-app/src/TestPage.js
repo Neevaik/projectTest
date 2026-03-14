@@ -3,6 +3,7 @@ import './css/pageTest.css';
 import "./css/MoviePage.css";
 import { useState } from "react";
 import { plus, multiply,minus,divide, isArray} from "./Tools.js";
+import { firstArray, secondArray } from "./data/data.js"
 
 function TestPage({ goToExercice, goToHome, goToTest2 }) {
 
@@ -12,6 +13,9 @@ function TestPage({ goToExercice, goToHome, goToTest2 }) {
   
   const array = [];
   isArray(array);
+
+  console.log("firstArray : ", firstArray)
+  console.log("secondArray : ", secondArray)
   return (
     <>
       <Navbar

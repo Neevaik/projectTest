@@ -1,4 +1,4 @@
-const mixedArray = [
+const firstArray = [
   "hello world",
   "javascript",
 
@@ -36,4 +36,19 @@ const mixedArray = [
   { name: "Kevin", age: 25 }
 ];
 
-export default mixedArray;
+const secondArray = [
+  "hello world",
+  "javascript",
+
+  [1, 2, 3, 4],
+  ["apple", "banana", "cherry"],
+  {
+  },
+  {
+  },
+  42,
+  true,
+  { name: "Kevin", age: 25 }
+];
+
+export { firstArray, secondArray };
