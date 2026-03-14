@@ -1,8 +1,9 @@
 import Navbar from "./components/Navbar";
+import "./data/data.js";
 import './css/pageTest.css';
 import "./css/MoviePage.css";
 import { useState } from "react";
-import { plus, multiply,minus,divide, isArray} from "./Tools.js";
+import { plus, multiply,minus,divide, isArray, isObject} from "./Tools.js";
 import { firstArray, secondArray } from "./data/data.js"
 
 function TestPage({ goToExercice, goToHome, goToTest2 }) {
@@ -14,8 +15,8 @@ function TestPage({ goToExercice, goToHome, goToTest2 }) {
   const array = [];
   isArray(array);
 
-  console.log("firstArray : ", firstArray)
-  console.log("secondArray : ", secondArray)
+  isObject(firstArray, secondArray);
+
   return (
     <>
       <Navbar
@@ -44,9 +45,13 @@ function TestPage({ goToExercice, goToHome, goToTest2 }) {
         </div>
         <p className="result">Résultat : {result} </p>
         <p className="result">{isArray(array) ? "Le tableau contient des éléments" : "Le tableau est vide"} </p>
+        <p className="result">{isObject(firstArray) ? "C'est un objet" : "Ce n'est pas un objet"} </p>
+        <p className="result">{isObject(secondArray) ? "C'est un objet" : "Ce n'est pas un objet"} </p>
       </div>
     </>
   );
 }
+
+console.log(isObject(firstArray));
 
 export default TestPage;

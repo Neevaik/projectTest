@@ -22,3 +22,18 @@ export function minus(operator, firstValue, secondValue, setResult) {
 export function isArray(param) {
   return Array.isArray(param) && param.length > 0;
 }
+
+export function isObject(param) {
+
+      if (!Array.isArray(param)) {
+    return false;
+  }
+
+    for (let element of param) {
+    if (typeof element === "object" && element !== null && !Array.isArray(element)) {
+        console.log("Objet:", element);
+     }
+
+    }
+  return true;
+}
